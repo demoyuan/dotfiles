@@ -1,0 +1,5 @@
+#!/bin/bash
+git config --global user.name "demoyuan"
+git config --global user.email "yuandemo@outlook.com"
+git config --global core.autocrlf input
+git config --list
