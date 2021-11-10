@@ -1,0 +1,18 @@
+#!/bin/bash
+
+if ! type node >/dev/null 2>&1; then
+    echo 'install node';
+    curl -L https://raw.githubusercontent.com/tj/n/master/bin/n | bash -s lts
+    #exit 1;
+fi
+
+if ! type n >/dev/null 2>&1; then
+    echo 'install n';
+    npm install -g n --registry=https://registry.npmmirror.com
+fi
+
+npm config set registry https://registry.npmmirror.com
+npm install -g yarn pnpm @antfu/ni
+yarn config set registry https://registry.npmmirror.com
+pnpm config set registry https://registry.npmmirror.com
+
