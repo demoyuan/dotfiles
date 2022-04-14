@@ -1,5 +1,8 @@
 #!/bin/bash
 
+## 更换源镜像
+termux-change-repo
+
 . <(curl -L gitee.com/mo2/linux/raw/2/2)
 apt install tsu
 apt install openssh
