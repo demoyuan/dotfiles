@@ -12,3 +12,13 @@ apt install android-tools
 
 passwd
 sshd
+
+## proot开启ssh
+# apt install openssh-server -y
+# vim /etc/ssh/sshd_config
+## Port 2222
+## PermitRootLogin yes
+# 设置密码 passwd
+# 创建权限分离目录 mkdir /run/sshd
+# 运行/usr/sbin/sshd
+# ssh root@localhost -p 2222
